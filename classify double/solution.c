@@ -93,9 +93,6 @@ bool checkForQuietNan (uint64_t number) {
 }
 
 void classify (double number) {
-    const uint64_t a = convertToUint64(number);
-    for (int i = 63; i >= 0; --i)
-        printf("%d", getBit(a, i));
     if (checkForPlusZero(convertToUint64(number))) {
         printf("Plus zero\n");
     }
