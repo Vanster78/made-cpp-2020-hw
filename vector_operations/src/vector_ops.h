@@ -85,6 +85,10 @@ namespace task {
         double lhs_length = calculate_length(lhs);
         double rhs_length = calculate_length(rhs);
 
+        if (lhs_length < eps || rhs_length < eps) {
+            return 1.0;
+        }
+
         double cosine = product / lhs_length / rhs_length;
 
         return cosine;
