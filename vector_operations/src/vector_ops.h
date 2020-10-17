@@ -96,9 +96,8 @@ namespace task {
 
   bool operator||(const std::vector<double>& lhs, const std::vector<double>& rhs) {
     double cosine = calculate_cosine(lhs, rhs);
-    double abs_cosine = std::abs(cosine);
 
-    return std::abs(1 - abs_cosine) < eps;
+    return std::abs(1 - cosine) < eps || std::abs(1 + cosine) < eps;
   }
 
   bool operator&&(const std::vector<double>& lhs, const std::vector<double>& rhs) {
