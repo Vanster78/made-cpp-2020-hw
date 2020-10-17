@@ -108,7 +108,7 @@ namespace task {
     }
 
     std::istream& operator>>(std::istream& input, std::vector<double>& vector) {
-        int length;
+        size_t length;
         input >> length;
 
         vector.resize(length);
